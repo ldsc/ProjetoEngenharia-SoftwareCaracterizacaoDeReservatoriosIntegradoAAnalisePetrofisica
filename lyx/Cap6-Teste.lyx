@@ -1,0 +1,791 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\usepackage {graphicx}
+\usepackage {longtable}
+
+\usepackage {indentfirst}
+\renewenvironment{center}{\par\centering}{\par}
+\end_preamble
+\use_default_options false
+\master DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding iso8859-1
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement p
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Teste
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter-Teste} 
+\backslash
+rhead{
+\backslash
+thepage} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Neste capítulo se apresenta os testes realizados para assegurar que o programa
+ esteja funcionando corretamente.
+\end_layout
+
+\begin_layout Section
+Dados entrada Teste na plataforma GNU/Linux
+\end_layout
+
+\begin_layout Standard
+O teste realizado no sistema operacional GNU/Linux, onde o código do software
+ foi desenvolvido utilizando o compilador 'g++'.
+ Verificou-se se o programa retornava valores corretos, se os erros de entradas
+ de dados eram observadas, se a comparação entre as permeabilidades obtidas
+ pelo teste de poço e amostragem retornava corretamente.
+\end_layout
+
+\begin_layout Standard
+A Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Iniciando-o-programa-linux"
+
+\end_inset
+
+ mostra a inicialização do programa, onde é solicitada a seleção do sistema
+ de unidades, o tipo de entrada dos parâmetros, dando ao usuário a opção
+ de importar os dados de um arquivo de disco ou inserir manualmenete e a
+ importação dos dados do registrador de pressão para execução do teste.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/teste/Linux1.png
+	width 100text%
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tela do programa mostrando a entrada de dados.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Iniciando-o-programa-linux"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Em seguida, como mostra a Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:regressao-estocagem"
+
+\end_inset
+
+ realiza a regressão linear, fazendo ajustes necessários devido ao período
+ de estocagem observado e exibindo o resultado na tela.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/teste/Linux 2.png
+	width 100text%
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tela do programa mostrando a regressão linear realizada com ajustes devido
+ ao período de estocagem 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:regressao-estocagem"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Após a realização da regressão linear e os ajustes devidos, o usuário pode
+ solicitar a geração do gráfico, como mostrado na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:regressao-estocagem"
+
+\end_inset
+
+.
+ Caso o usuário opte por gerar o gráfico, o resultado será exibido como
+ mostrado na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:grafico-linux"
+
+\end_inset
+
+.
+ Após a geração do gráfico, os paramêtros calculados à partir do teste de
+ formação serão exibidos na tela, como mostrado na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:parametros-calculados"
+
+\end_inset
+
+.O usuário, então, poderá escolher se deseja comparar os dados do teste de
+ poço com os dados obtidos em amostragem de testemunho.
+ Caso opte por comparar, o usuário obterá a comparção e em seguida a caracteriza
+ção do reservatório, conforme mostrado na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:final-linux"
+
+\end_inset
+
+.
+ Além disso, possibilita a exportação dos resultados para um arquivo de
+ disco, além de opção por rodar novamente o programa.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/teste/Linux 3 (grafico).png
+	scale 70
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico de 
+\begin_inset Formula $Pws$
+\end_inset
+
+ vs.
+ 
+\begin_inset Formula $log[(Tp+\Delta t)/\Delta t]$
+\end_inset
+
+ gerado 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:grafico-linux"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/teste/Linux 4.png
+	width 100text%
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tela exibindo cálculo dos paramêtros, comparação entre permeabilidades,
+ caracterização do reservatório, opção por saída de dados e opção por rodar
+ novamente o programa
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:final-linux"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Dados entrada Teste na plataforma Windows
+\end_layout
+
+\begin_layout Standard
+O teste realizado no sistema operacional Windows 7, onde o código do software
+ foi desenvolvido utilizando o compilador 'Dev C++'.
+ Verificou-se se o programa retornava valores corretos, se os erros de entradas
+ de dados eram observadas, se a comparação entre as permeabilidades obtidas
+ pelo teste de poço e amostragem retornava corretamente.
+\end_layout
+
+\begin_layout Standard
+A Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Iniciando-o-programa"
+
+\end_inset
+
+ mostra a inicialização do programa, onde é solicitada a seleção do sistema
+ de unidades e a entrada dos parâmetros.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/teste/Figura 7.2.png
+	width 100text%
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tela do programa mostrando a entrada de dados 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Iniciando-o-programa"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Em seguida, como mostra a Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Solicita-dados-registrador"
+
+\end_inset
+
+, o programa solicita os dados do registrador de pressão, e realiza a regressão
+ linear, exibindo o resultado na tela.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../PrintsTeste/Figura 7.3.png
+	width 100text%
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tela do programa mostrando seleção do arquivo de entrada, e posterior regressão
+ linear e o ajuste da curva.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Solicita-dados-registrador"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Após a realização da regressão linear, o usuário pode solicitar a geração
+ do gráfico, como mostrado na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Geracao-de-grafico"
+
+\end_inset
+
+.
+ Caso o usuário opte por gerar o gráfico, o resultado será exibido como
+ mostrado na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:grafico-gerado"
+
+\end_inset
+
+.
+ Após a geração do gráfico, os paramêtros calculados à partir do teste de
+ formação serão exibidos na tela, como mostrado na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:parametros-calculados"
+
+\end_inset
+
+.O usuário, então, poderá escolher se deseja comparar os dados do teste de
+ poço com os dados obtidos em amostragem de testemunho.
+ Caso opte por comparar, o usuário obterá a comparção e em seguida a caracteriza
+ção do reservatório, conforme mostrado na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:compara-k"
+
+\end_inset
+
+ Caso não opte por comparar, o usuário obterá a caracterização do reservatório,
+ como mostrado na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:nao-compara-k"
+
+\end_inset
+
+.
+ Em ambos os casos, o usuário pode optar entre executar novamente o programa
+ ou encerrá-lo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/teste/Figura 7.4.png
+	width 100text%
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tela do programa mostrando a possibilidade de geração do gráfico.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Geracao-de-grafico"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/teste/Figura 7.5.png
+	scale 40
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico de 
+\begin_inset Formula $Pws$
+\end_inset
+
+ vs.
+ 
+\begin_inset Formula $log[(Tp+\Delta t)/\Delta t]$
+\end_inset
+
+ gerado pelo Gnuplot.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:grafico-gerado"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/teste/Figura 7.6.png
+	width 100text%
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Paramêtros do reservatório calculado pelo teste de formação realizado
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:parametros-calculados"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/teste/Figura 7.7.png
+	width 100text%
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Comparação de permeabilidades seguida da caracterização do reservatório
+ e possibilidade de nova execução ou encerramento do programa.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:compara-k"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/teste/Figura 7.8.png
+	width 100text%
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+O usuário optou por não comparar as permeabilidades e assim obter diretamente
+ a caracterização do reservatório e a opção de nova execução do programa
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:nao-compara-k"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

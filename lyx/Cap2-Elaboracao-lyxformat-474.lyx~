@@ -1,0 +1,1451 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass book
+\begin_preamble
+\usepackage {graphicx}
+\usepackage {longtable}
+\usepackage {indentfirst}
+\renewenvironment{center}{\par\centering}{\par}
+\end_preamble
+\use_default_options false
+\master DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding iso8859-1
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Elaboração
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Elaboração
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Elaboração"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter
+\backslash
+space - Elaboração}
+\backslash
+rhead{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nesta etapa será feita uma análise dos requisitos do programa, isto é, o
+ que é necessário para que o programa seja desenvolvido.
+ Assim, o programa é ajustado de forma a permitir que o usuário possa variar
+ parâmetros e verificar as consequências geradas na análise de comportamento
+ do reservatório.
+ Permite, também, expansões futuras do programa, como exemplo incluir testes
+ de formação específicos para reservatórios de gás, atendendo à necessidades
+ posteriores.
+\end_layout
+
+\begin_layout Section
+Análise de domínio
+\end_layout
+
+\begin_layout Standard
+O objetivo desta análise é compreender a abrangência do sistema desenvolvido
+ pois o diagrama de pacotes representam as áreas abordadas pelo programa.
+ 
+\end_layout
+
+\begin_layout Standard
+O programa a ser desenvolvido, trabalha em duas frentes principais relacionadas
+ à área de Engenharia de Exploração e Produção de Petróleo: 
+\end_layout
+
+\begin_layout Itemize
+Subárea da Petrofísica: conteúdo que trata das propriedades físicas de minerais
+ e rochas, incluindo composição matricial e espaço poroso, além dos fluidos
+ que a percorrem;
+\end_layout
+
+\begin_layout Itemize
+Subárea da Engenharia de Reservatórios: que compreende atividades como a
+ utilização de métodos para teste de pressão, acompanhando dados de pressão
+ em poços em função da vazão de produção.
+ Esse acompanhamento permite determinar parâmetros de drenagem e outros
+ fatores que interferem na produção do reservatório.
+\end_layout
+
+\begin_layout Subsection
+Subárea da Engenharia de Reservatórios
+\end_layout
+
+\begin_layout Standard
+De acordo com 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "apostila-petrobras"
+
+\end_inset
+
+, a avaliação de formação consiste em um conjunto de atividades e estudos
+ que têm como objetivo estimar as propriedades de uma formação (permeabilidade,
+ fator de película, índice de produtividade, etc).
+ Para executar o teste, o poço é completado temporariamente para permitir
+ a produção dos fluidos contidos na formação de forma segura, em uma vazão
+ controlada.
+ Os passo a passo do teste são listados a seguir e a Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ArranjoTeste"
+
+\end_inset
+
+ detalha um arranjo convencional de um teste de pressão.
+\end_layout
+
+\begin_layout Standard
+Os testes de pressão seguem as seguintes etapas:
+\end_layout
+
+\begin_layout Itemize
+completar o poço temporariamente para permitir a produção do fluido de forma
+ segura.
+\end_layout
+
+\begin_layout Itemize
+isolar o intervalo a ser testado.
+\end_layout
+
+\begin_layout Itemize
+criar um diferencial de pressão entre poço e reservatorio, afim de produzir
+ o fluido.
+\end_layout
+
+\begin_layout Itemize
+promover períodos intercalados de produção e fechamento do poço.
+\end_layout
+
+\begin_layout Itemize
+registro contínuo de vazões em superfície e pressões no poço.
+\end_layout
+
+\begin_layout Itemize
+analisar resultados.
+\end_layout
+
+\begin_layout Standard
+Segundo 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "maximiano"
+
+\end_inset
+
+, um teste de formação tem como objetivos:
+\end_layout
+
+\begin_layout Itemize
+avaliar a capacidade produtiva da formação.
+\end_layout
+
+\begin_layout Itemize
+investigar a existência de danos de formação e efeito de estocagem.
+\end_layout
+
+\begin_layout Itemize
+determinar a extensão do reservatório e sua pressão inicial.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename ../Imagens/Figura 3.1.png
+	scale 70
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Arranjo de um teste de pressão convencional 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ArranjoTeste"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O registrador de pressão externo registra as pressões externas à coluna,
+ os tubos perfurados permitem a passagem dos fluidos para o interior da
+ coluna, o obturador (
+\shape italic
+packer
+\shape default
+) veda o espaço anular, isolando a formação da pressão hidrostática exercida
+ pelo fluido de amortecimento.
+ O Registrador interno indica entupimento dos tubos perfurados, a válvula
+ de fundo permite a abertura ou fechamento do poço e o registrador acima
+ da válvula é utilizado para verificar vazamento da válvula durante a estática.
+ A válvula de circulação reversa permite passagem do anular para o interior
+ da coluna de teste.
+ Já o estrangulador (
+\shape italic
+choke
+\shape default
+) é um redutor de diâmetro utilizado na linha de superfície à montante do
+ separador para limitar/controlar a vazão do poço.
+ Os diâmetros mais utilizados são: 1/8”, 1/4”, 3/8” e 1/2”, dados contidos
+ em
+\begin_inset CommandInset citation
+LatexCommand cite
+key "teste-pressao"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Modelagem dos testes de pressão para reservatório
+\end_layout
+
+\begin_layout Standard
+A Equação da difusividade para um fluxo monofásico e uma geometria radial
+ é a base para explicação do comportamento apresentado por um reservatório,
+ a mesma é dada por:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{r}\frac{\text{∂}}{\text{∂}r}\left(\frac{k(r)}{\mu}r\frac{\text{∂}p}{\text{∂}r}\right)+\frac{k(r)}{\mu}Cf\left(\frac{\text{∂}p}{\text{∂}r}\right)^{2}=\phi Ct\frac{\text{∂}p}{\text{∂}t}\label{eq:Difusividade-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A equação admite inúmeras soluções.
+ Para obter a solução para um caso particular é necessário especificar as
+ condições iniciais e de contorno de acordo com o tipo de reservatório.
+\end_layout
+
+\begin_layout Standard
+Com os dados obtidos da pressão e o tempo em que cada uma foi medida (o
+ teste inteiro pode variar a duração desde algumas horas a alguns dias),
+ gera-se um gráfico semi-logarítmico em que seu coeficiente angular possui
+ uma relação intrínseca com a permeabilidade da formação, permitindo estimar
+ propriedades pelo método de Horner 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "reservatorio-livroverde"
+
+\end_inset
+
+, ilustrado pela 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Gráfico-semi-logaritimico"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Imagens/Grafico Semi Logaritmico.png
+	scale 70
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico semi-logaritimico obtido pelo Método de Horner, que fornece parâmetros
+ referentes ao reservatório.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Gráfico-semi-logaritimico"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As equações apresentadas a seguir para determinação dos parâmetros são vistas
+ em 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "reservatorio-livroverde"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A permeabilidade, que é definida como a capacidade de um material (tipicamente
+ uma rocha) de transmitir fluídos, pode ser inferida pela equação 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Permeabilidade"
+
+\end_inset
+
+.
+ Na equação, 
+\family typewriter
+
+\begin_inset Formula $q$
+\end_inset
+
+
+\family default
+ [barris/d] é a vazão, 
+\family typewriter
+
+\begin_inset Formula $B$
+\end_inset
+
+
+\family default
+ [adimensional] o fator volume-formação, 
+\family typewriter
+
+\begin_inset Formula $h$
+\end_inset
+
+ 
+\family default
+[pés] a altura da formação, 
+\family typewriter
+
+\begin_inset Formula $\mu$
+\end_inset
+
+
+\family default
+ [cp] a viscosidade do fluido, 
+\begin_inset Formula $m$
+\end_inset
+
+ [adimensional] é o coeficiente angular, o coeficiente 
+\begin_inset Formula $\alpha_{p}$
+\end_inset
+
+[adimensional] define o sistema de unidades utilizado, variando do sistema
+ de unidades Americano (
+\begin_inset Formula $\alpha_{p}=141.2$
+\end_inset
+
+) e Brasileiro (
+\begin_inset Formula $\alpha_{p}=19.03$
+\end_inset
+
+).
+ A implementação desse coeficiente no programa permite uma maior abrangência
+ de uso ao programa.
+ As unidades utilizadas por cada sistema estão mostradas na tabela 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Sistemas-de-Unidades"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sistemas de Unidades 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Sistemas-de-Unidades"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parâmetro
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Americano
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Petrobras
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Comprimento (
+\begin_inset Formula $r_{w},h$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+pés (
+\begin_inset Formula $ft$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+metros (
+\begin_inset Formula $m$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vazão (
+\begin_inset Formula $q$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+barris por dia (
+\begin_inset Formula $\frac{bbl}{d}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+metros cúbos por dia
+\begin_inset Formula $(\frac{m^{3}}{d})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Permeabilidade (
+\begin_inset Formula $k$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+milidarcy (
+\begin_inset Formula $md$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+milidarcy (
+\begin_inset Formula $md$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fator Volume-Formação (
+\begin_inset Formula $B$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{bbl}{STB}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{m\text{³}}{m\text{³}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tempo (
+\begin_inset Formula $tp,twbs,\triangle t$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+horas (
+\begin_inset Formula $h$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+horas (
+\begin_inset Formula $h$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Viscosidade (
+\begin_inset Formula $\mu$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+centipoises (
+\begin_inset Formula $cp$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+centipoises (
+\begin_inset Formula $cp$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pressão (
+\begin_inset Formula $P_{wf},P_{i},\triangle P_{skin})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $psi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{kgf}{cm\text{²}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Temperatura (
+\begin_inset Formula $T)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+rankine (
+\begin_inset Formula $R$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+kelvin 
+\begin_inset Formula $(K)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+k=\frac{1.151\alpha_{p}qB\mu}{mh}\label{eq:Permeabilidade}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O fator de película 
+\begin_inset Formula $S$
+\end_inset
+
+ [adimensional] é definido como uma região ao redor do poço cuja permeabilidade
+ foi alterada, reduzida (por fluido de perfuração/completação, inchamento
+ de argilas, inversão de molhabilidade, etc) ou melhorada (através de processos
+ de acidificação, fraturamento hidráulico, etc.) e se dá pela equação 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:dano"
+
+\end_inset
+
+.
+ É uma equação adimensional, onde 
+\begin_inset Formula $c_{t}$
+\end_inset
+
+ [1/psi] é a compressibilidade total, 
+\begin_inset Formula $r_{w}$
+\end_inset
+
+ [pés] é o raio do poço, 
+\begin_inset Formula $t_{p}$
+\end_inset
+
+ [dias] o tempo de produção do poço, 
+\begin_inset Formula $P_{wf}$
+\end_inset
+
+ [psi] é a pressão registrada no fechamento do poço, 
+\begin_inset Formula $\Delta P_{skin}$
+\end_inset
+
+ [psi] é a queda de pressão devido ao dano e 
+\begin_inset Formula $n$
+\end_inset
+
+ [adimensional] é o coeficiente linear do gráfico.
+ Quanto maior o valor do fator de película, maior o dano, resultando em
+ menor produção e maior queda de pressão.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+S=\frac{1.151.(m.log(t_{p}+1)+n-P_{wf})}{(-m-log(k/(c_{t}r{}_{w}^{2})+3.23)}\label{eq:dano}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\Delta P_{skin}=0.869.(-m).s$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A capacidade produtiva de um poço é caracterizada pelo índice de produtividade
+ 
+\begin_inset Formula $IP$
+\end_inset
+
+ [barris/(dias.psi)], que indica a necessidade de injeção de fluidos para
+ maior efetividade da recuperação.
+ A eficiência de fluxo 
+\begin_inset Formula $EF$
+\end_inset
+
+ [adimensional] indica o quanto a produção está sendo afetada pelo fator
+ de película do poço.
+ Esses fatores, dados em porcentagem, são importantes para a engenharia
+ de reservatórios, pois definem a viabilidade de produção.
+ São definidos pela equações 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:IP"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:EF"
+
+\end_inset
+
+, sendo 
+\begin_inset Formula $Pi$
+\end_inset
+
+ [psi] a pressão inicial do reservatório, indicada pelo gráfico.
+ Valores maiores que 10 para o índice de produtividade são considerados
+ bons.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+IP=\frac{q}{P_{i}-P_{wf}}\label{eq:IP}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+EF=\frac{P_{i}-P_{wf}-\Delta P{\scriptstyle skin}}{P_{i}-P_{wf}}\label{eq:EF}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O raio efetivo do poço 
+\begin_inset Formula $r_{we}$
+\end_inset
+
+ é definido como o tamanho teórico do poço incluindo o dano, calculado pela
+ equação 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:raioefetivo"
+
+\end_inset
+
+.
+ Quanto maior o dano, menor o raio efetivo, pois o poço produz menos do
+ que deveria.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+r_{we}=r_{w}\ast e^{-s}\label{eq:raioefetivo}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O efeito de estocagem ocorre nos primeiros momentos da produção, fazendo
+ com que a vazão do poço não seja igual à do reservatório, havendo uma estocagem
+ de fluidos no interior do poço pela expansão e compressão do volume dos
+ hidrocarbonetos.
+ O coeficiente de estocagem 
+\begin_inset Formula $C$
+\end_inset
+
+ [barris/psi] é descrito pela equação 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:CoeficienteEstocagem"
+
+\end_inset
+
+, e sua duração, 
+\begin_inset Formula $t_{wbs}$
+\end_inset
+
+[horas], pela equação 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:TempodeEstocagem"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+C=\frac{qB\triangle t}{24(P-P_{wf})}\label{eq:CoeficienteEstocagem}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+t_{wbs}=\frac{60.0+3.5*S}{(24C*\alpha{\scriptstyle p}kh\mu)}\label{eq:TempodeEstocagem}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Correlação para cálculo da viscosidade
+\end_layout
+
+\begin_layout Standard
+É comum, em muitas situações na indústria do petróleo, o usuário não dispor
+ de todos os parâmetros de entrada.
+ Ao explorar uma nova formação, muitas vezes há incertezas acerca dos paramêtros
+ do fluido em questão.
+ Para que o teste de poço apresente resultados mais realísticos (acurados),
+ é possível utilizar correlações empíricas obtidas na literatura.
+ 
+\end_layout
+
+\begin_layout Standard
+Segundo definido por 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "petrosky&farshad"
+
+\end_inset
+
+, é possível correlacionar a viscosidade do óleo (
+\begin_inset Formula $\mu)$
+\end_inset
+
+ com sua temperatura (
+\begin_inset Formula $T)$
+\end_inset
+
+ e sua densidade (
+\begin_inset Formula $\rho)$
+\end_inset
+
+.
+ Para efeitos de simplificação, este software supõe que o óleo a ser estudado
+ trata-se de óleo morto, sob temperatura entre 105 F e 295 F e pressão entre
+ 1600 a 10250 psi, o que é compatível com a finalidade do programa.
+ A equação 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:petrosky"
+
+\end_inset
+
+ de Petrosky & Farshad é apresentada à seguir:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mu=(2.3511\cdot10^{7})\ast(T^{-2.10255})\ast(log{}_{10}API)^{X}\label{eq:petrosky}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Onde o parâmetro 
+\begin_inset Formula $X$
+\end_inset
+
+ é definido na equação à seguir:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+X=(4.59388\cdot log_{10}T)-22.82792
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As unidades utilizadas nesta correlação são: Temperatura (Fahrenheit), densidade
+ (API) e a viscosidade é resultada em cp.
+\end_layout
+
+\begin_layout Subsection
+Sub-área Petrofísica
+\end_layout
+
+\begin_layout Standard
+A petrofísica estuda aspectos teóricos e experimentais referentes à determinação
+ das propriedades físicas das rochas, bem como as causas de suas variações
+ no tempo e no espaço.
+ O trabalho foca na obtenção do parâmetro de permeabilidade através da utilizaçã
+o de um permeâmetro.
+ 
+\end_layout
+
+\begin_layout Standard
+A permeabilidade obtida através de um teste petrofísico é pontual, para
+ um intervalo de uma amostra coletada por um processo conhecido por testemunhage
+m.
+ O software fará uma simulação direta do funcionamento de um permeâmetro.
+ O objetivo será comparar a permeabilidade obtida na testemunhagem com àquela
+ obtida no teste de formação.
+ 
+\end_layout
+
+\begin_layout Standard
+O permeâmetro a gás (ilustrado na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:exemplo-permeametro"
+
+\end_inset
+
+) é utilizado para determinar o fluxo de gás que passa pela amostra em função
+ da diferença quadrática entre a pressão de entrada (
+\begin_inset Formula $P_{u}$
+\end_inset
+
+) e a pressão de saída (
+\begin_inset Formula $P_{d}$
+\end_inset
+
+).
+ A equação
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Vazao-1"
+
+\end_inset
+
+ relaciona a área da amostra (
+\begin_inset Formula $A$
+\end_inset
+
+) e a viscosidade (
+\begin_inset Formula $\mu$
+\end_inset
+
+) do gás.
+ O funcionamento deste equipamento pode ser comparado com os do experimento
+ de Darcy, com a única diferença que no permeâmetro se utiliza um fluxo
+ de gás, não de água.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q=\frac{Ak}{2000\mu P_{atm}}=(P_{u}^{2}-P_{d}^{2})\label{eq:Vazao-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Onde: 
+\begin_inset Formula $Q$
+\end_inset
+
+ [
+\begin_inset Formula $\mathrm{cm^{3}/s}$
+\end_inset
+
+] é a vazão; 
+\begin_inset Formula $A$
+\end_inset
+
+ [
+\begin_inset Formula $\mathrm{m^{2}}$
+\end_inset
+
+] a área; 
+\begin_inset Formula $\mu\mathrm{[cp]}$
+\end_inset
+
+ a viscosidade; 
+\begin_inset Formula $P_{atm}\mathrm{[atm]}$
+\end_inset
+
+ é a pressão atmosférica; 
+\begin_inset Formula $k\mathrm{[mD]}$
+\end_inset
+
+ é a permeabilidade da amostra; 
+\begin_inset Formula $P_{u}\mathrm{[atm]}$
+\end_inset
+
+ a pressão de entrada e 
+\begin_inset Formula $P_{d}\mathrm{[atm]}$
+\end_inset
+
+ a pressão de saída no permeâmetro.
+\end_layout
+
+\begin_layout Standard
+O porosímetro é um equipamento petrofísico utilizado para medir a porosidade
+ em laboratório, a partir de amostras de rochas obtidas em testemunhagem.
+ Como o programa não simula diretamente a presença de um porosímetro, o
+ usuário deve entrar com o dado da porosidade da zona de interesse (reservatório
+) para que o programa simule o teste da formação.
+ 
+\end_layout
+
+\begin_layout Standard
+O Engenheiro de Reservatórios deve ter acesso à porosidade para que possa
+ executar os testes, mostrando mais uma vez a complexidade desta área e
+ a necessidade de interação entre os diferentes setores da Engenharia de
+ Petróleo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Imagens/Permeametro_Gas.jpg
+	width 100text%
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Exemplo de um permeâmetro a gás 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:exemplo-permeametro"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Identificação de pacotes -- assuntos
+\end_layout
+
+\begin_layout Itemize
+Pacote DadosPoço: importa os dados do teste de pressão de um arquivo .dat
+ e apresenta conceitos utilizados para estimar parâmetros do reservatório.
+\end_layout
+
+\begin_layout Itemize
+Pacote DadosTestemunho: importa os dados do testemunho de um arquivo .dat
+ e apresenta conceitos utilizados para estimar parâmetros do reservatório.
+\end_layout
+
+\begin_layout Itemize
+Pacote AjusteCurva: realiza a regressão linear dos dados passados no arquivo
+ .dat.
+ Deve apresentar conexão com o Pacote DadosPoço, uma vez que recebe os dados
+ contidos nele.
+ Pode receber dados contidos no Pacote DadosTestemunho caso as informações
+ sejam inseridas no arquivo .dat correspondente.
+\end_layout
+
+\begin_layout Itemize
+Pacote Caracterizacao: gera os gráficos com a curva semi-logaritimica dos
+ dados da regressão linear feit, plota os dados de entrada da pressão versus
+ tempo, avalia os resultados através de um modelo para caracterização.
+\end_layout
+
+\begin_layout Itemize
+Pacote SimuladorPropriedades: composto de diversas equações, calcula propriedade
+s que podem ser obtidas pela curva semi-logaritimica.
+ Os resultados dessas equações são parte da saída do programa.
+\end_layout
+
+\begin_layout Section
+Diagrama de pacotes -- assuntos
+\end_layout
+
+\begin_layout Standard
+Um diagrama de pacotes é útil para mostrar as dependências entre as diversas
+ partes do sistema.
+ Pode incluir: sistemas, subsistemas, colaborações, casos de uso e componentes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Diagramas/DiagramaPacotes2.jpeg
+	scale 60
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de pacotes mostra as dependências entre os diversos pacotes do
+ sistema
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

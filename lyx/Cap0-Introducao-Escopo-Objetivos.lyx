@@ -1,0 +1,487 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass book
+\begin_preamble
+\usepackage {graphicx}
+\usepackage {longtable}
+\usepackage {indentfirst}
+\end_preamble
+\use_default_options false
+\master DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding iso8859-1
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Capa
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+UNIVERSIDADE ESTADUAL DO NORTE FLUMINENSE
+\begin_inset Newline newline
+\end_inset
+
+LABORATÓRIO DE ENGENHARIA E EXPLORAÇÃO DE PETRÓLEO
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+O título deve ser o mais claro possível, não deixando dúvidas sobre o assunto
+ em questão.
+ O uso de vírgula ou dois pontos pode deixar o título com mais impacto.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+PROJETO ENGENHARIA: 
+\begin_inset Newline newline
+\end_inset
+
+DESENVOLVIMENTO DO SOFTWARE SIMULADOR
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+CARACTERIZAÇÃO DE RESERVATÓRIOS INTEGRADO À ANÁLISE PETROFÍSICA
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+TRABALHO DA DISCIPLINA PROGRAMAÇÃO PRÁTICA
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+MAXIMIANO KANDA FERRAZ - VERSÃO 1 (2012/2)
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+GABRIEL VASCONCELOS DE SOUSA - VERSÃO 1 (2012/2)
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+ALEXANDRE LISBOA BASTOS JUNIOR - VERSÃO 2 (2014/2)
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+JOÃO VITOR MARINHO DA COSTA NEVES - VERSÃO 2 (2014/2)
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Prof.: André Duarte Bueno
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 5cm
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+o valor de 4cm pode ser alterado, para que a distribuição fique mais uniforme
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+MACAÉ - RJ
+\begin_inset Newline newline
+\end_inset
+
+MARÇO - 2015
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Introdução
+\begin_inset CommandInset label
+LatexCommand label
+name "cha:Introdução"
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Introdução
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter
+\backslash
+space - Introdução}
+\backslash
+rhead{}
+\backslash
+pagenumbering{arabic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Existem inúmeros softwares desenvolvidos na indústria do petróleo objetivando
+ a caracterização de um reservatório a partir de dados de poço, análises
+ de pressão de um dado reservatório ao longo do seu tempo produtivo, sob
+ diferentes condições de produção e vazões.
+ 
+\end_layout
+
+\begin_layout Standard
+Este programa foi desenvolvido baseado em um software desenvolvido por 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "maximiano"
+
+\end_inset
+
+.
+ Para tornar o programa anterior mais eficaz, o programa deve gerir melhor
+ os dados de entrada (reduzindo-os) ou os dados de saída (expandindo-os),
+ ambos, ou a eficiência e clareza do código em si.
+ 
+\end_layout
+
+\begin_layout Standard
+O presente trabalho prentende simplificar, de forma eficiente, o 
+\emph on
+input
+\emph default
+ do programa, fazendo com que o usuário possa dispor de maior diversidade
+ nos paramêtros de entrada, tornando as informações obtidas mais realísticas
+ e utilizando-se de correlações comprovadamente eficientes pela literatura.
+ 
+\end_layout
+
+\begin_layout Standard
+O grande diferencial do programa é permitir que o usuário avalie a formação
+ à partir de dados do poço e que calcule a permeabilidade diretamente da
+ amostragem de testemunho, podendo, ao final, comparar os resultados obtidos
+ para os testes de poço e a testemunhagem.
+ O programa também permitirá maior flexibilidade nas entradas de composição
+ do fluido, permitindo que o usuário utilize correlações encontradas na
+ literatura, caso necessário.
+\end_layout
+
+\begin_layout Section
+Escopo do problema
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Escopo-do-Problema"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Avaliações de formações
+\emph default
+ desempenham um papel fundamental na indústria do petróleo.
+ A necessidade de determinar características de reservatórios, avaliando
+ a disponibilidade de hidrocarbonetos e futuras previsões para determinado
+ tempo de produção são premissas básicos para um Engenheiro de Reservatórios.
+ Uma avaliação correta, utilizando as técnicas da análise de dados de pressão,
+ permite que investimentos sejam corretamente alocados.
+\end_layout
+
+\begin_layout Standard
+Uma outra frente importante a ser trabalhada na indústria do petróleo é
+ a estimativa dos 
+\emph on
+paramêtros petrofísicos
+\emph default
+.
+ Paramêtros como permeabilidade e porosidade são necessários para a caracterizaç
+ão de reservatórios de hidrocarbonetos.
+ Um Engenheiro de Reservatórios, ao avaliar a potencialidade do reservatório,
+ geralmente tem à sua disposição os dados permoporosos da formação.
+ Esses dados, muitas vezes, são obtidos através de testemunhagem, com amostras
+ submetidas à análises petrofísicas.
+\end_layout
+
+\begin_layout Standard
+Na testemunhagem, para determinar os paramêtros necessários, é aplicada
+ a lei de Boyle-Mariotte para a determinação de porosidade.
+ Esta lei relaciona a variação do volume e pressão de um gás a uma temperatura
+ constante, regendo o princípio do porosímetro, que determina o volume poroso
+ pela expensão do gás dentro da amostra rochosa.
+ A porosidade é então determinada pela razão do volume de vazios (também
+ conhecido por volume poroso) e o volume total da amostra.
+\end_layout
+
+\begin_layout Standard
+Já o permeâmetro à gás é um equipamento petrofísico usado para determinar
+ a permeabilidade da amostra.
+ O permeâmetro determina o fluxo de gás que atravessa a amostra, a partir
+ do quadrado da diferença entre a pressão de entrada e a pressão de saída,
+ que depende da área do testemunho e da viscosidade do gás que a atravessa.
+\end_layout
+
+\begin_layout Standard
+A partir de entradas de paramêtros pré estabelecidos ou calculados experimentalm
+ente pelos equipamentos supracitados, é possível, utilizando conceitos básicos
+ de fluxo através de formações porosas, aplicar técnicas de análise de dados
+ de pressão em poços.
+ 
+\end_layout
+
+\begin_layout Section
+Objetivos
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Objetivos"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Os objetivos deste trabalho são:
+\end_layout
+
+\begin_layout Itemize
+Objetivo geral:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Criar um software capaz de calcular parâmetros e inferir características
+ de um reservatório, através da análise dos dados obtidos em testes de pressão
+ em poços e na testemunhagem do reservatório, possibilitando estimar as
+ dimensões do campo e sua potencialidade econômica.
+ Um diferencial importante nesta versão é a flexíbilidade na entrada de
+ dados do usuário.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Objetivos específicos:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Cálculo da permeabilidade efetiva, dano de formação, índice de produtividade,
+ efeito de estocagem.
+\end_layout
+
+\begin_layout Itemize
+Cálculo de propriedades desconhecidas dos fluidos, quando estas são desconhecida
+s, a partir de correlações empíricas aceitas na literatura
+\end_layout
+
+\begin_layout Itemize
+Permitir que o usuário obtenha a permeabilidade através de dados obtidos
+ em procedimentos petrofísicos de testemunhagem
+\end_layout
+
+\begin_layout Itemize
+Permitir comparação entre a permeabilidade obtida no teste de formação com
+ a obtida por testemunhagem
+\end_layout
+
+\begin_layout Itemize
+Fornecer curvas de pressão ao longo do tempo através de um programa para
+ plotar gráficos.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

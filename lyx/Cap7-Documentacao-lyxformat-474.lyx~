@@ -1,0 +1,532 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass book
+\begin_preamble
+\usepackage {graphicx}
+\usepackage {longtable}
+\usepackage {indentfirst}
+\end_preamble
+\use_default_options false
+\master DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding iso8859-1
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Documentação 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter-Documentação} 
+\backslash
+rhead{
+\backslash
+thepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A documentação apresentada é referente à execução do software 
+\begin_inset Quotes eld
+\end_inset
+
+PROGRAMA EM C++ PARA CARACTERIZAÇÃO DE RESERVATÓRIOS INTEGRADO À ANÁLISE
+ PETROFÍSICA
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Será explicado o passo a passo da utilização do programa.
+\end_layout
+
+\begin_layout Section
+Documentação para Usuário
+\end_layout
+
+\begin_layout Standard
+O programa calcula a permeabilidade, o fator de película, a pressão inicial,
+ a eficiência de fluxo, o índice de produtividade, o coeficiente e o tempo
+ de estocagem do reservatório que foi submetido ao teste de pressão (de
+ curta ou longa duração), assim como correlaciona à viscosidade do fluido
+ com temperatura e densidade, além de comparar a permeabilidade obtida à
+ partir da testemunhagem do reservatório.
+ Deve-se assegurar o seguinte para o funcionamento do software:
+\end_layout
+
+\begin_layout Enumerate
+Os dados registrados no registrador de pressão do poço devem ser colocados
+ na pasta do programa, sob qualquer nome, em formato de texto.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Item opcional: Para gerar o gráfico característico do reservatório: Ter
+ instalado o software livre 
+\begin_inset Quotes eld
+\end_inset
+
+Gnuplot
+\begin_inset Quotes erd
+\end_inset
+
+ no computador.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Para abrir o programa no sistema operacional 
+\begin_inset Quotes eld
+\end_inset
+
+Windows
+\begin_inset Quotes erd
+\end_inset
+
+, simplesmente clique duas vezes em 
+\begin_inset Quotes eld
+\end_inset
+
+Simulador.exe
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Caso o sistema operacional utilizado seja o 
+\begin_inset Quotes eld
+\end_inset
+
+Linux
+\begin_inset Quotes erd
+\end_inset
+
+, abra o terminal, selecione o caminho da pasta do programa.
+ Digite então: 
+\begin_inset Quotes eld
+\end_inset
+
+g++ *.cpp
+\begin_inset Quotes erd
+\end_inset
+
+ para compilar os arquivos do programa e em seguida 
+\begin_inset Quotes eld
+\end_inset
+
+./a.out
+\begin_inset Quotes erd
+\end_inset
+
+ para executar o programa.
+\end_layout
+
+\begin_layout Enumerate
+Ao abrir o arquivo executável, com interação própria do software com o usuário,
+ digite 1 para dar início ao software.
+ Para sair, digite 2 e em seguida 'enter'.
+\end_layout
+
+\begin_layout Enumerate
+Escolha o sistema de unidades que o registrador de pressão trabalha: Digite
+ 1 para o sistema americano (oilfield) ou 2 para o brasileiro (Petrobras).
+\end_layout
+
+\begin_layout Enumerate
+Escolha se deseja importar a partir de um arquivo .dat os dados do reservatório,
+ poço e fluido ou se deseja informar cada um dos parâmetros.
+\end_layout
+
+\begin_layout Enumerate
+Os passos 8 à 16 serão seguidos somente caso o usuário opte por informar
+ os paramêtros manualmente.
+ Caso os dados sejam importados de um arquivo .dat, prosseguir para passo
+ 18.
+\end_layout
+
+\begin_layout Enumerate
+Informe a porosidade do reservatório e tecle enter.
+\end_layout
+
+\begin_layout Enumerate
+Informe a altura do reservatório e tecle enter.
+\end_layout
+
+\begin_layout Enumerate
+Informe o fator volume formação do fluido e tecle enter.
+\end_layout
+
+\begin_layout Enumerate
+Informe se deseja inserir a viscosidade do fluido (opção 1) ou se deseja
+ calcular à partir de correlações (opção 2).
+\end_layout
+
+\begin_layout Enumerate
+Informe a compressibilidade total (rocha+fluido) e tecle enter.
+\end_layout
+
+\begin_layout Enumerate
+Informe a vazão de produção e tecle enter.
+\end_layout
+
+\begin_layout Enumerate
+Informe o tempo de produção e tecle enter.
+\end_layout
+
+\begin_layout Enumerate
+Informe a pressão no poço e tecle enter.
+\end_layout
+
+\begin_layout Enumerate
+Informe o raio do poço e tecle enter.
+\end_layout
+
+\begin_layout Enumerate
+O programa pedirá para que o usuário entre com o nome do arquivo contendo
+ os dados do registrador de pressão para execução do teste de poço.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Nesse momento, o programa fará a regressão linear dos dados importados e
+ mostrará na tela a equação da reta no formato 
+\begin_inset Quotes eld
+\end_inset
+
+y = a * x + b
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Ele identificará o período de estocagem do reservatório para não haver
+ erro de cálculo, pois a análise do teste de pressão deve ser feita do período
+ transiente.
+\end_layout
+
+\begin_layout Enumerate
+Escolha se quer que o programa gere o gráfico com o Gnuplot: Digite 1 para
+ sim ou 2 para não e tecle enter.
+\end_layout
+
+\begin_layout Enumerate
+Nesse momento o programa:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+- Mostrará na tela os parâmetros do reservatório calculados, com as devidas
+ unidades.
+\end_layout
+
+\begin_layout Standard
+- Mostrará na tela os detalhes do período de estocagem do poço, se houver.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Em seguida, o usuário terá a opção de comparar os dados de permeabilidade
+ obtidos pelo software com dados reais do testemunho.
+ Digite 's' se deseja comparar, digite 'n' para dar continuidade à caracterizaçã
+o do reservatório
+\end_layout
+
+\begin_layout Enumerate
+Item opcional (caso o usuário decida comparar a permeabilidade): Nos arquivos
+ DadosFluidoRochaCilindro.dat e DadosPermeametroGas.dat, contidos na pasta
+ do software, o usuário deverá inserir os dados obtidos a partir do permeâmetro,
+ para que o programa possa fazer o ajuste linear necessário e encontrar
+ a permeabilidade da amostra.
+\end_layout
+
+\begin_layout Enumerate
+O programa exibirá em tela a interpretação dos resultados do teste no âmbito
+ da caracterização do reservatório.
+ Caso faça a opção por fazer a comparação com a amostra, o programa também
+ calculará o erro resultante dessa comparação e fará uma interpretação à
+ partir deste erro.
+\end_layout
+
+\begin_layout Enumerate
+Digite 1 para rodar o programa novamente ou 2 para sair, tecle enter.
+ 
+\end_layout
+
+\begin_layout Standard
+Observação: Se houver uma entrada negativa de valor (equivocada), ou entradas
+ absurdas (acima dos limites superiores utilizados na indústria), o programa
+ pedirá para o usuário fazer nova entrada dos dados.
+\end_layout
+
+\begin_layout Section
+Documentação para desenvolvedor
+\end_layout
+
+\begin_layout Standard
+Apresenta-se nesta seção a documentação para o desenvolvedor, isto é, informaçõe
+s para usuários que queiram modificar, aperfeiçoar ou ampliar este software.
+\end_layout
+
+\begin_layout Subsection
+Dependências
+\end_layout
+
+\begin_layout Standard
+Para compilar o software é necessário atender as seguintes dependências:
+\end_layout
+
+\begin_layout Itemize
+No sistema operacional GNU/Linux: Instalar o compilador g++ da GNU disponível
+ em 
+\begin_inset CommandInset href
+LatexCommand href
+name "http://gcc.gnu.org"
+target "http://gcc.gnu.org"
+
+\end_inset
+
+.
+ Para instalar no GNU/Linux use o comando 
+\family typewriter
+yum install gcc
+\family default
+.
+ No sistema operacional Windows é necessário instalar um compilador apropriado.
+ Recomenda-se o Dev C++ disponível em 
+\begin_inset CommandInset href
+LatexCommand href
+name "http://dev-c.softonic.com.br/"
+target "http://dev-c.softonic.com.br/"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Biblioteca CGnuplot; os arquivos para acesso a biblioteca CGnuplot devem
+ estar no diretório com os códigos do software;
+\end_layout
+
+\begin_layout Itemize
+O software 
+\family typewriter
+gnuplot
+\family default
+, disponível no endereço 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.gnuplot.info/"
+
+\end_inset
+
+, deve estar instalado.
+ É possível que haja necessidade de setar o caminho para execução do 
+\family typewriter
+gnuplot
+\family default
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+O programa depende da existência de um arquivo de dados (formato .dat) para
+ preencher os vetores relacionados aos dados do registrador de pressão (Tempo
+ sem produção e pressão medida).
+\end_layout
+
+\begin_layout Itemize
+O programa depende da existência dos arquivos DadosFluidoRochaCilindro.dat
+ e DadosPermeametroGas.dat caso o usuário deseja comparar os dados obtidos
+ do teste de poço com a permeabilidade de um testemunho do reservatório.
+\end_layout
+
+\begin_layout Subsection
+Documentação usando doxygen
+\end_layout
+
+\begin_layout Standard
+A documentação do código do software foi feita usando o padrão JAVADOC.
+ Depois de documentar o código, o software 
+\emph on
+doxygen
+\emph default
+ foi usado para gerar a documentação do desenvolvedor no formato html.
+ O software 
+\family typewriter
+doxygen
+\family default
+ lê os arquivos com os códigos (*.h e *.cpp) e gera uma documentação muito
+ útil e de fácil navegação no formato html.
+ 
+\end_layout
+
+\begin_layout Standard
+Apresenta-se a seguir algumas imagens com as telas das saídas geradas pelo
+ software 
+\family typewriter
+doxygen:
+\family default
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../PrintsTeste/saida-doxygen1.png
+	width 100text%
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:print-doxygen-1"
+
+\end_inset
+
+ Hierarquia de classes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../PrintsTeste/saida-doxygen2.png
+	width 100text%
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:print-doxygen-2"
+
+\end_inset
+
+Exemplo de características de uma classe CPoco)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

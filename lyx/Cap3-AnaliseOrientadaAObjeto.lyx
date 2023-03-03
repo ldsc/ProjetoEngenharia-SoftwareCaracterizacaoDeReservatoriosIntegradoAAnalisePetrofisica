@@ -1,0 +1,1522 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\usepackage {graphicx}
+\usepackage {longtable}
+
+\usepackage {indentfirst}
+\renewenvironment{center}{\par\centering}{\par}
+\end_preamble
+\use_default_options false
+\master DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding iso8859-1
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement p
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+AOO – Análise Orientada a Objeto 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Análise Orientada a Objeto
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:AOO----Análise"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter
+\backslash
+space - Análise Orientada a Objeto}
+\backslash
+rhead{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A Análise Orientada a Objeto (AOO) é a etapa de desenvolvimento de um software
+ que utiliza algumas regras para identificar os objetos de interesse, as
+ relações entre os pacotes, as classes, os atributos, os métodos, as heranças,
+ as associações, as agregações, as composições e as dependências.
+ 
+\end_layout
+
+\begin_layout Section
+Diagramas de classes
+\end_layout
+
+\begin_layout Standard
+O diagrama de classes é apresentado na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagrama-de-Classe-1"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagrama-de-classes-2"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/diagramas/Diagrama-de-Classes-parte1.jpeg
+	scale 60
+	rotateAngle 90
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-de-Classe-1"
+
+\end_inset
+
+Diagrama de Classes - Parte 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/diagramas/Diagrama-de-Classes-parte2.jpeg
+	scale 60
+	rotateAngle 90
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-de-classes-2"
+
+\end_inset
+
+Diagrama de Classes - Parte 2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Dicionário de classes
+\end_layout
+
+\begin_layout Itemize
+Classe CPoco: Classe que possui as características/atributos do poço, e
+ tem uma função de entrada de dados por parte do usuário.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+atributo raioPoco [
+\begin_inset Formula $ft$
+\end_inset
+
+ ou 
+\begin_inset Formula $m$
+\end_inset
+
+] : referente ao raio do poço.
+\end_layout
+
+\begin_layout Itemize
+atributo vazao [
+\begin_inset Formula $\frac{bbl}{d}$
+\end_inset
+
+ ou 
+\begin_inset Formula $\frac{m}{d}^{3}$
+\end_inset
+
+] : referente à vazão de produção.
+\end_layout
+
+\begin_layout Itemize
+atributo tempoProducao [
+\begin_inset Formula $horas$
+\end_inset
+
+]: referente ao tempo de produção.
+\end_layout
+
+\begin_layout Itemize
+atributo pressaoPoco [
+\begin_inset Formula $psi$
+\end_inset
+
+ ou 
+\begin_inset Formula $\frac{kgf}{cm^{2}}$
+\end_inset
+
+]: referente à pressão no poço.
+\end_layout
+
+\begin_layout Itemize
+método EntradaDados ( ): Método que pede ao usuário os parâmetros necessários
+ para o programa.
+\end_layout
+
+\begin_layout Itemize
+método Erro ( ): Verifica e retorna uma mensagem de erro, caso haja alguma
+ entrada equivocada do usuário.
+\end_layout
+
+\begin_layout Itemize
+método Vazao (_vazao): Método que seta o valor do atributo vazao.
+\end_layout
+
+\begin_layout Itemize
+método Vazao ( ): Método que retorna o valor do atributo vazao.
+ 
+\end_layout
+
+\begin_layout Itemize
+método TempoProducao (_tempoProducao): Método que seta o valor do atributo
+ tempoProducao.
+\end_layout
+
+\begin_layout Itemize
+método TempoProducao ( ): Método que retorna o valor do atributo tempoProducao.
+ 
+\end_layout
+
+\begin_layout Itemize
+método PressaoPoco (_pressaoPoco): Método que seta o valor do atributo pressaoPo
+co.
+\end_layout
+
+\begin_layout Itemize
+método PressaoPoco ( ): Método que retorna o valor do atributo pressaoPoco.
+ 
+\end_layout
+
+\begin_layout Itemize
+método RaioPoco (_raioPoco): Método que seta o valor do atributo raioPoco.
+\end_layout
+
+\begin_layout Itemize
+método RaioPoco ( ): Método que retorna o valor do atributo raioPoco.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Classe CReservatorio: Classe que possui as características/atributos do
+ reservatório, e tem uma função de entrada de dados por parte do usuário.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+atributo porosidade [
+\begin_inset Formula $adimensional$
+\end_inset
+
+] : referente à porosidade da rocha reservatório.
+\end_layout
+
+\begin_layout Itemize
+atributo altura [
+\begin_inset Formula $ft$
+\end_inset
+
+ ou 
+\begin_inset Formula $m$
+\end_inset
+
+] : referente ao intervalo do reservatório.
+\end_layout
+
+\begin_layout Itemize
+atributo sistemaUnidade : referente ao sistema de unidades escolhido.
+\end_layout
+
+\begin_layout Itemize
+método EntradaDados ( ): Método que pede ao usuário os parâmetros necessários
+ para o programa.
+\end_layout
+
+\begin_layout Itemize
+método Erro ( ): Verifica e retorna uma mensagem de erro, caso haja alguma
+ entrada equivocada do usuário.
+\end_layout
+
+\begin_layout Itemize
+método Altura (_altura): Método que seta o valor do atributo altura.
+\end_layout
+
+\begin_layout Itemize
+método Altura ( ): Método que retorna o valor do atributo altura.
+ 
+\end_layout
+
+\begin_layout Itemize
+método SistemaUnidades ( ): Método do tipo void que pergunta ao usuário
+ o sistema de unidades utilizado para os parâmetros fornecidos, atráves
+ de um pequeno menu.
+\end_layout
+
+\begin_layout Itemize
+método Porosidade (_porosidade): Método que seta o valor do atributo porosidade.
+\end_layout
+
+\begin_layout Itemize
+método Porosidade ( ): Método que retorna o valor do atributo porosidade.
+ 
+\end_layout
+
+\begin_layout Itemize
+método SistemaUnidade (_sistemaUnidade): Método que seta o valor do atributo
+ sistemaUnidade.
+\end_layout
+
+\begin_layout Itemize
+método SistemaUnidade ( ): Método que retorna o valor do atributo sistemaUnidade.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Classe CFluido: Classe que possui as características/atributos do fluido,
+ e tem uma função de entrada de dados por parte do usuário.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+atributo viscosidade [
+\begin_inset Formula $cp$
+\end_inset
+
+] : referente à viscosidade do fluido.
+\end_layout
+
+\begin_layout Itemize
+atributo compressibilidade [
+\begin_inset Formula $psi^{-1}$
+\end_inset
+
+ ou 
+\begin_inset Formula $\frac{kgf}{cm^{2}}^{-1}$
+\end_inset
+
+] : referente à compressibilidade do fluido.
+\end_layout
+
+\begin_layout Itemize
+atributo fatorVolumeFormacao [
+\begin_inset Formula $\frac{bbl}{STB}$
+\end_inset
+
+ou 
+\begin_inset Formula $\frac{m^{3}}{m^{3}std}]$
+\end_inset
+
+ : referente ao fator volume-formação do fluido.
+\end_layout
+
+\begin_layout Itemize
+atributo temperaturafluido [
+\begin_inset Formula $Fahrenheit$
+\end_inset
+
+]: referente à temperatura do fluido.
+\end_layout
+
+\begin_layout Itemize
+método EntradaDados ( ): Método que pede ao usuário os parâmetros necessários
+ para o programa.
+\end_layout
+
+\begin_layout Itemize
+método Erro ( ): Verifica e retorna uma mensagem de erro, caso haja alguma
+ entrada equivocada do usuário.
+\end_layout
+
+\begin_layout Itemize
+método Viscosidade (_viscosidade): Método que seta o valor do atributo viscosida
+de.
+\end_layout
+
+\begin_layout Itemize
+método Viscosidade ( ): Método que retorna o valor do atributo viscosidade.
+ 
+\end_layout
+
+\begin_layout Itemize
+método ViscosidadeCorrelacao () : Método que calcula a viscosidade de oleo
+ morto através de correlação Petrosky & Farshad se a mesma não for informada.
+\end_layout
+
+\begin_layout Itemize
+método Compressibilidade (_compressibilidade): Método que seta o valor do
+ atributo compressibilidade.
+\end_layout
+
+\begin_layout Itemize
+método Compressibilidade ( ): Método que retorna o valor do atributo compressibi
+lidade.
+\end_layout
+
+\begin_layout Itemize
+método FatorVolumeFormacao (_fatorVolumeFormacao): Método que seta o valor
+ do atributo fatorVolumeFormacao.
+\end_layout
+
+\begin_layout Itemize
+método FatorVolumeFormacao ( ): Método que retorna o valor do atributo fatorVolu
+meFormacao.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Classe CDadosRegistradorPressao: Classe que cria 2 vetores e os preenche
+ com os dados de teste de pressão importados de um arquivo de disco.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+atributo pressaoMedida [
+\begin_inset Formula $psi$
+\end_inset
+
+ ou 
+\begin_inset Formula $\frac{kgf}{cm^{2}}$
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Itemize
+atributo tempoSemProducao [
+\begin_inset Formula $horas$
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Itemize
+método Importa ( ): Método que preenche os vetores com dados de pressão
+ medida e tempo sem produção.
+\end_layout
+
+\begin_layout Itemize
+método PressaoMedida (_pressaoMedida): Método que seta o valor do atributo
+ pressaoMedida.
+\end_layout
+
+\begin_layout Itemize
+método PressaoMedida (_posicao): Método que seta o valor do atributo pressaomedi
+da na posicao desejada.
+\end_layout
+
+\begin_layout Itemize
+método PressaoMedida ( ): Método que retorna o valor do atributo pressaoMedida.
+ 
+\end_layout
+
+\begin_layout Itemize
+método TempoSemProducao (_tempoSemProducao): Método que seta o valor do
+ atributo tempoSemProducao.
+\end_layout
+
+\begin_layout Itemize
+método TempoSemProducao (_posicao): Método que seta o valor do atributo
+ tempoSemProducao na posição desejada.
+ 
+\end_layout
+
+\begin_layout Itemize
+método TempoSemProducao ( ): Método que retorna o valor do atributo tempoSemProd
+ucao.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Classe CEstatistica: Classe que faz a média e desvio padrão de vetores,
+ necessários para a regressão linear dos dados.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+atributo media.
+\end_layout
+
+\begin_layout Itemize
+atributo desviopadrao.
+\end_layout
+
+\begin_layout Itemize
+método Media (v): Retorna a média do vetor v.
+\end_layout
+
+\begin_layout Itemize
+método DesvioPadrao (v): Retorna o desvio padrão do vetor v.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Classe CAjusteCurvaMinimosQuadrados: Classe que faz a regressão linear através
+ do método dos mínimos quadrados.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+atributo coeficienteAngular.
+\end_layout
+
+\begin_layout Itemize
+atributo coeficienteLinear.
+\end_layout
+
+\begin_layout Itemize
+atributo coeficienteCorrelacao.
+\end_layout
+
+\begin_layout Itemize
+método CoeficienteAngular (vx,vy): Retorna o coeficiente angular da reta
+ obtida da regressão dos vetores vx e vy.
+\end_layout
+
+\begin_layout Itemize
+método CoeficienteLinear (vx,vy): Retorna o coeficiente linear da reta obtida
+ da regressão dos vetores vx e vy.
+\end_layout
+
+\begin_layout Itemize
+método CoeficienteCorrelacao (vx,vy): Retorna o coeficiente correlação da
+ reta obtida da regressão dos vetores vx e vy.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Classe CAjusteCurva: Classe que executa a regressão linear (de uma reta
+ semilogarítmica) dos dados obtidos e verifica se o coeficiente de correlação
+ é satisfatório, caso não seja, descobre-se a melhor aproximação (o ponto)
+ onde começa a reta da curva (a curva sendo o efeito de estocagem).
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+atributo m: Representa o coeficiente angular da reta obtida na regressão
+ linear.
+\end_layout
+
+\begin_layout Itemize
+atributo n: Representa o coeficiente linear da reta obtida na regressão
+ linear.
+\end_layout
+
+\begin_layout Itemize
+atributo r: Coeficiente de correlação da reta, quanto mais próximo de 1,
+ melhor a regressão linear.
+\end_layout
+
+\begin_layout Itemize
+atributo logt: Vetor que relaciona as variáveis tp e o vetor deltat.
+\end_layout
+
+\begin_layout Itemize
+atributo efeitoEstocagem
+\end_layout
+
+\begin_layout Itemize
+método Regressao (vx, vy, z): Função que executa a regressão linear propriamente
+ dita dos vetores, calculando os valores de m, n e r.
+\end_layout
+
+\begin_layout Itemize
+método Ajuste (vx, vy, z): Função que analisa se a regressão linear tem
+ um fator de correlação de Pearson suficiente para o programa gerar resultados
+ confiáveis.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Classe CGnuplot: Classe que possibilita a geração de gráficos usando o programa
+ externo Gnuplot.
+\end_layout
+
+\begin_layout Itemize
+Classe CSimuladorAnaliseTestePressao: Classe principal, que se comunica
+ com os objetos das outras classes para inferir parâmetros do reservatório
+ e calcular outras variáveis a partir de equações de correlação.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+atributo permeabilidade [
+\begin_inset Formula $mD$
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Itemize
+atributo pressaoInicial [
+\begin_inset Formula $psi$
+\end_inset
+
+ ou 
+\begin_inset Formula $\frac{kgf}{cm^{2}}$
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Itemize
+atributo fatorPelicula [
+\begin_inset Formula $adimensional$
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Itemize
+atributo pressaoDano [
+\begin_inset Formula $psi$
+\end_inset
+
+ ou 
+\begin_inset Formula $\frac{kgf}{cm^{2}}$
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Itemize
+atributo indiceProdutividade 
+\begin_inset Formula $[adimensional]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+atributo eficienciaFluxo [
+\begin_inset Formula $adimensional$
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Itemize
+atributo raioEfetivo [
+\begin_inset Formula $ft$
+\end_inset
+
+ ou 
+\begin_inset Formula $m$
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Itemize
+atributo coeficienteEstocagem 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+[
+\begin_inset Formula $adimensional$
+\end_inset
+
+]
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang brazilian
+.
+\end_layout
+
+\begin_layout Itemize
+atributo tempoEstocagem [
+\begin_inset Formula $horas$
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Itemize
+método CalculoPermeabilidade ( ): Função que calcula e exibe a permeabilidade
+ do reservatório.
+\end_layout
+
+\begin_layout Itemize
+método CalculoPressaoInicial ( ): Função que calcula e exibe a pressão inicial
+ pela extrapolação da reta.
+\end_layout
+
+\begin_layout Itemize
+método CalculoFatorPelicula ( ): Função que calcula e exibe o fator de película
+ do reservatório e a queda de pressão devido à esse fator.
+\end_layout
+
+\begin_layout Itemize
+método CalculoIndices ( ): Função que calcula e exibe o índice de produtividade
+ do reservatório e a eficiência de fluxo.
+\end_layout
+
+\begin_layout Itemize
+método CalculoRaioEfetivo ( ): Função que calcula e exibe o raio efetivo.
+\end_layout
+
+\begin_layout Itemize
+método CalculoEstocagem ( ): Função que calcula e exibe a estocagem.
+\end_layout
+
+\begin_layout Itemize
+método EntradaDados ( ): Método que pede ao usuário os parâmetros necessários
+ para o programa.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Classe CCaracterizacaoReservatorio: Classe que caracteriza o reservatório,
+ interpretando os resultados obtidos.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+método Caracterizacao (permeabilidade, fatorPelicula, indiceProdutividade,
+ raioPoco, raioEfetivo): Método que analisa os resultados e informa ao usuário
+ a qualidade do reservatório submetido ao teste de pressão.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Classe CSimuladorPermeabilidadeGas : Classe que calcula a permeabilidade
+ através do permeâmetro à gás em um testemunho rochoso.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+atributo permeabilidade [
+\begin_inset Formula $mD$
+\end_inset
+
+];
+\end_layout
+
+\begin_layout Itemize
+método permeabilidade ( ) : Método para cálculo da permeabilidade através
+ do permeâmetro em um testemunho;
+\end_layout
+
+\begin_layout Itemize
+método ComparaPermeabilidades (k_reservatorio) : Método para comparar permeabili
+dade obtida do teste de poço com amostra de rocha;
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Classe CGasPermeametro: classe utilizada para importar os dados de viscosidade
+ do gás utilizado no permeâmetro.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+atributo viscosidade [
+\begin_inset Formula $cp$
+\end_inset
+
+]: valor da viscosidade do fluido (gás);
+\end_layout
+
+\begin_layout Itemize
+método ImportaDadosFluido(): método que importa dados de um arquivo.dat;
+\end_layout
+
+\begin_layout Itemize
+método Viscosidade(_viscosidade): utilizado para setar o valor do atributo
+ viscosidade;
+\end_layout
+
+\begin_layout Itemize
+método Viscosidade(): utilizado para retornar o valor do atributo viscosidade;
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Classe CTestemunhoRocha: representa os parâmetros referentes à amostra.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+atributo id: nome da amostra.
+\end_layout
+
+\begin_layout Itemize
+atributo pesoseco 
+\begin_inset Formula $[g$
+\end_inset
+
+]: valor do peso seco da amostra.
+\end_layout
+
+\begin_layout Itemize
+atributo temperatura [
+\begin_inset Formula $^{o}C$
+\end_inset
+
+]: representa o valor da temperatura durante a realização das medidas.
+\end_layout
+
+\begin_layout Itemize
+método ID (_id): utilizado para setar o atributo id.
+\end_layout
+
+\begin_layout Itemize
+método ID ( ) : utilizado para retornar o valor do atributo id.
+\end_layout
+
+\begin_layout Itemize
+método PesoSeco (_peso_seco) : utilizado para setar o atributo pesoSeco.
+\end_layout
+
+\begin_layout Itemize
+método PesoSeco ( ) : utilizado para retornar o valor do atributo pesoSeco.
+\end_layout
+
+\begin_layout Itemize
+método ImportaDadosRocha ( ) : utilizado para importar dados da rocha de
+ um arquivo .dat.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Classe CCilindro: representa os atributos e métodos referentes a um cilindro.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+atributo diametro [
+\begin_inset Formula $m$
+\end_inset
+
+] : valor do diâmetro de um cilindro;
+\end_layout
+
+\begin_layout Itemize
+atributo comprimento [
+\begin_inset Formula $m$
+\end_inset
+
+]: valor do comprimenteo de um cilindro;
+\end_layout
+
+\begin_layout Itemize
+atributo volumeTotal [
+\begin_inset Formula $m^{3}$
+\end_inset
+
+]: valor referente ao volume de um cilindro;
+\end_layout
+
+\begin_layout Itemize
+atributo areaTransversal [
+\begin_inset Formula $m^{2}$
+\end_inset
+
+]: valor referente á área transversal de um cilindro;
+\end_layout
+
+\begin_layout Itemize
+método Diametro(_diametro): utilizado para setar o atributo diametro;
+\end_layout
+
+\begin_layout Itemize
+método Diametro(): utilizado para retornar o valor do atributo diametro;
+\end_layout
+
+\begin_layout Itemize
+método Comprimento(_comprimento): utilizado para setar o atributo comprimento;
+\end_layout
+
+\begin_layout Itemize
+método Comprimento(): utilizado para retornar o valor do atributo comprimento;
+\end_layout
+
+\begin_layout Itemize
+método VolumeTotal(_volumeTotal): utilizado para setar o atributo volumeTotal
+ da amostra;
+\end_layout
+
+\begin_layout Itemize
+método VolumeTotal(): utilizado para retornar o valor do atributo volume;
+\end_layout
+
+\begin_layout Itemize
+método AreaTransversal (): utilizado para retornar o valor do atributo AreaTrans
+versal;
+\end_layout
+
+\begin_layout Itemize
+método AreaTransversal (_diametro, _comprimento): método que calculará o
+ valor do atributo areaTransversal;
+\end_layout
+
+\begin_layout Itemize
+método VolumeTotal (_diametro, _comprimento): método que calculará o valor
+ do atributo volumeTotal;
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Classe CPermeametro: representa os atributos adquiridos através de medidas
+ no permeâmetro à gás.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+atributo pressaoEntrada: vetor que armazena os diversos valores da pressão
+ de entrada setada no equipamento;
+\end_layout
+
+\begin_layout Itemize
+atributo pressaoSaida: representa a pressão de saída;
+\end_layout
+
+\begin_layout Itemize
+atributo vazaoPermeametro: vetor que armazena os diversos valores da vazão
+ medida no equipamento;
+\end_layout
+
+\begin_layout Itemize
+atributo difPressao: vetor que armazena as diferenças de pressão registradas;
+\end_layout
+
+\begin_layout Itemize
+método ImportaDadosPermeametro ( ): método que irá importar os dados e calcular
+ o valor das diferenças de pressões de entrada e saída.
+\end_layout
+
+\begin_layout Itemize
+método PressaoEntrada (_pressaoEntrada): utilizado para setar o atributo
+ pressaoentrada.
+\end_layout
+
+\begin_layout Itemize
+método PressaoEntrada ( ): utilizado para retornar o valor do atributo pressaoen
+trada;
+\end_layout
+
+\begin_layout Itemize
+método PressaoSaida (_pressaoSaida): utilizado para setar o atributo pressaoSaid
+a;
+\end_layout
+
+\begin_layout Itemize
+método PressaoSaida ( ): utilizado para retornar o valor do atributo pressaosaid
+a;
+\end_layout
+
+\begin_layout Itemize
+método VazaoPermeametro (_vazao): utilizado para setar o atributo vazaopermeamet
+ro;
+\end_layout
+
+\begin_layout Itemize
+método VazaoPermeametro (): utilizado para retornar o valor do atributo
+ vazaopermeametro;
+\end_layout
+
+\begin_layout Itemize
+método DifPressao(_difPressao): utilizado para setar o atributo difPressao;
+\end_layout
+
+\begin_layout Itemize
+método DifPressao(): utilizado para retornar o valor do atributo difPressao;
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Diagrama de seqüência – eventos e mensagens 
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:diagrama de sequência"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+\emph on
+O diagrama de seqüência enfatiza a troca de eventos e mensagens e sua ordem
+ temporal.
+ Contém informações sobre o fluxo de controle do programa.
+ Costuma ser montado a partir de um diagrama de caso de uso e estabelece
+ o relacionamento dos atores (usuários e sistemas externos) com alguns objetos
+ do sistema.
+\end_layout
+
+\begin_layout Subsection
+
+\shape italic
+\emph on
+Diagrama de sequência geral
+\end_layout
+
+\begin_layout Standard
+Veja o 
+\shape italic
+\emph on
+diagrama de seqüência geral na
+\shape default
+\emph default
+ Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagrama-de-sequência-geral"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/diagramas/Diagrama-de-Sequencia-Geral.jpeg
+	scale 60
+	rotateAngle 90
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-de-sequência-geral"
+
+\end_inset
+
+Diagrama de sequência geral, mostrando a ordem temporal e sequêncial dos
+ eventos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\shape italic
+\emph on
+Diagrama de sequência específico
+\end_layout
+
+\begin_layout Standard
+Veja o 
+\shape italic
+\emph on
+diagrama de seqüência específico na
+\shape default
+\emph default
+ Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagrama-de-sequência-especifico"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/diagramas/Diagrama-de-Sequencia-Especifico.jpeg
+	scale 70
+	rotateAngle 90
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-de-sequência-especifico"
+
+\end_inset
+
+Diagrama de sequência específico mostra de forma mais detalhada uma parte
+ do programa
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Diagrama de comunicação – colaboração 
+\begin_inset CommandInset label
+LatexCommand label
+name "par:Diagrama-de-colaboração:"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Veja na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagrama-de-comunicação"
+
+\end_inset
+
+ o diagrama de comunicação.
+ A entrada de dados fornece os atributos para as classes/objetos de CPoco,
+ CReservatorio e CFluido.
+ Já a classe CDadosRegistradorPressao e CPermeametro importam seus dados
+ de arquivos de texto.
+ A classe CDadosRegistradorPressao passa os dados para a classe CAjusteCurva,
+ que utiliza a classe CAjusteCurvaMinimosQuadrados para fazer a regressão
+ de dois vetores usando a média e o desvio padrão obtidos por CEstatistica.
+ A função de ajuste encontra coeficientes de estocagem, enquanto CSimuladorAnali
+seTestePressao faz cálculos dos paramêtros do reservatório com os dados
+ entrados pelo usuário e pela importação de arquivo DadosRegistrador.dat.
+ A classe CCaracterizacao caracteriza o reservatorio com a função Caracterizacao
+ que calcula os atributos permeabilidade, fatorPelicula, indiceProdutividade,
+ raioPoco, raioEfetivo.
+ A classe CSimuladorPermeabilidadeGas compara a permeabilidade obtida pelo
+ testemunho e a permeabilidade obtida pelo teste de poço, explicando as
+ diferenças ou semelhanças dos resultados obtidos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/diagramas/Diagrama-de-Comunicacao.jpeg
+	width 100text%
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-de-comunicação"
+
+\end_inset
+
+Diagrama de comunicação, que mostra o conjunto de objetos e seus relacionamentos
+, incluindo as mensagens trocadas entre eles
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Diagrama de máquina de estado 
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:diagrama de estados"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Veja na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:O-diagrama-maquina"
+
+\end_inset
+
+ o diagrama de máquina de estado para o objeto da classe CSimuladorAnaliseTesteP
+ressao.
+ Observe que o objeto possui atributos informados pelo usuário na seleção
+ do parâmetro a ser variado, e como será feita tal variação.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/diagramas/Diagrama-Maquina-Estado.jpeg
+	scale 75
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:O-diagrama-maquina"
+
+\end_inset
+
+O diagrama de máquina de estado mostra os diversos estados que o objeto
+ assume e os eventos que ocorrem ao longo do processo., modelando aspectos
+ dinâmicos do objeto
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Diagrama de atividades
+\end_layout
+
+\begin_layout Standard
+Na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagrama-de-atividades"
+
+\end_inset
+
+, o diagrama de atividades do programa mostra que, os atributos altura e
+ porosidade do objeto da classe CReservatorio (informado pelo usuário) deve
+ seguir requesito para que sua entrada seja correta.
+ Caso haja erro na entrada (porosidade inferior à 0 ou superior a 1 e altura
+ inferior a 0), o programa pede uma nova entrada de porosidade ou altura.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/diagramas/Diagrama-de-Atividades.jpeg
+	scale 70
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-de-atividades"
+
+\end_inset
+
+Diagrama de atividades, mostrando o fluxo de controle do método CReservatorio::E
+rro()
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

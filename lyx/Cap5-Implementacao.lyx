@@ -1,0 +1,1501 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass book
+\begin_preamble
+\usepackage {graphicx}
+\usepackage {longtable}
+\usepackage {indentfirst}
+\renewenvironment{center}{\par\centering}{\par}
+
+% Comentar linhas abaixo se não estiver usando pacote abntex
+% ou se o pacote ainda não foi instalado.
+% neste caso sugere-se usar citações no padrão apalike (lembra o da anbt).
+%\usepackage[alf ,abnt-etal-cite=2 , abnt-year-extra-label=yes , abnt-etal-list=0]{abntcite}
+%\usepackage {helvet}
+%\renewcommand {\familydefault}{\sfdefault}
+
+% Para uso de listagens de código
+\usepackage{color}
+\definecolor{azulclaro}{rgb}{0.6,1,1}%   rgb color model
+% Informa que vai usar o pacote listings, 
+% disponibilizado em /usr/share/texmf/doc/latex/styles/listings.dvi
+\usepackage{listings}
+\end_preamble
+\use_default_options false
+\master DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding iso8859-1
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement p
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Implementação
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Implementação"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter-Implementação} 
+\backslash
+rhead{
+\backslash
+thepage} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Neste capítulo está listado o código fonte do programa propriamente dito.
+\end_layout
+
+\begin_layout Section
+Código fonte
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Codigo-fonte"
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Implementação
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se a seguir um conjunto de classes (arquivos .h e .cpp) além do
+ programa main.
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{poco-h}
+\end_layout
+
+\end_inset
+
+ o arquivo com código da classe 
+\family typewriter
+CPoco
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de cabeçalho da classe CPoco.h.}, label={poco-h}
+,extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CPoco.h}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{poco-cpp}
+\end_layout
+
+\end_inset
+
+ o arquivo de implementação da classe 
+\family typewriter
+CPoco
+\family default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de implementação da classe CPoco.cpp.},
+ label={poco-cpp},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CPoco.cpp}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{reservatorio-h}
+\end_layout
+
+\end_inset
+
+ o arquivo com código da classe 
+\family typewriter
+CReservatorio
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de cabeçalho da classe CReservatorio.h.},
+ label={reservatorio-h},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CReservatorio.h}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{reservatorio-cpp}
+\end_layout
+
+\end_inset
+
+ o arquivo de implementação da classe 
+\family typewriter
+CReservatorio
+\family default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de implementação da classe CReservatorio.cpp.},
+ label={reservatorio-cpp},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CReservatorio.cpp}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{fluido-h}
+\end_layout
+
+\end_inset
+
+ o arquivo com código da classe 
+\family typewriter
+CFluido
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de cabeçalho da classe CFluido.h.}, label={fluid
+o-h},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CFluido.h}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{fluido-cpp}
+\end_layout
+
+\end_inset
+
+ o arquivo de implementação da classe 
+\family typewriter
+CFluido
+\family default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de implementação da classe CFluido.cpp.},
+ label={fluido-cpp},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CFluido.cpp}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{registrador-h}
+\end_layout
+
+\end_inset
+
+ o arquivo com código da classe 
+\family typewriter
+
+\begin_inset Newline newline
+\end_inset
+
+CDadosRegistradorPressao
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de cabeçalho da classe CDadosRegistradorPressa
+o.h.}, label={registrador-h},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CDadosRegistradorPressao.h}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{registrador-cpp}
+\end_layout
+
+\end_inset
+
+ o arquivo de implementação da classe 
+\family typewriter
+CDadosRegistradorPressao
+\family default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de implementação da classe CDadosRegistradorPr
+essao.cpp.}, label={registrador-cpp},extendedchars=true,breaklines=true,basicstyle
+=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CDadosRegistradorPressao.cpp}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{estat-h}
+\end_layout
+
+\end_inset
+
+ o arquivo com código da classe 
+\family typewriter
+CEstatistica
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de cabeçalho da classe CEstatistica.h.},
+ label={estat-h},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CEstatistica.h}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{estat-cpp}
+\end_layout
+
+\end_inset
+
+ o arquivo de implementação da classe 
+\family typewriter
+CEstatistica
+\family default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de implementação da classe CEstatistica.cpp.},
+ label={estat-cpp},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CEstatistica.cpp}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{minimoquadrado-h}
+\end_layout
+
+\end_inset
+
+ o arquivo com código da classe 
+\family typewriter
+
+\begin_inset Newline newline
+\end_inset
+
+CAjusteCurvaMinimosQuadrados
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de cabeçalho da classe CAjusteCurvaMinimosQuad
+rados.h.}, label={minimoquadrado-h},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CAjusteCurvaMinimosQuadrados.h}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{minimoquadrado-cpp}
+\end_layout
+
+\end_inset
+
+ o arquivo de implementação da classe 
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+CAjusteCurvaMinimosQuadrados
+\family default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de implementação da classe CAjusteCurvaMinimos
+Quadrados.cpp.}, label={minimoquadrado-cpp},extendedchars=true,breaklines=true,bas
+icstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CAjusteCurvaMinimosQuadrados.cpp}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{ajuste-h}
+\end_layout
+
+\end_inset
+
+ o arquivo com código da classe 
+\family typewriter
+CAjusteCurva
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de cabeçalho da classe CAjusteCurva.h.},
+ label={ajuste-h},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CAjusteCurva.h}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{ajuste-cpp}
+\end_layout
+
+\end_inset
+
+ o arquivo de implementação da classe 
+\family typewriter
+CAjusteCurva
+\family default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de implementação da classe CAjusteCurva.cpp.},
+ label={ajuste-cpp},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CAjusteCurva.cpp}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{cilindro-h}
+\end_layout
+
+\end_inset
+
+ o arquivo com código da classe 
+\family typewriter
+CCilindro
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de cabeçalho da classe CCilindro.h.}, label={cil
+indro-h},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CCilindro.h}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{cilindro-cpp}
+\end_layout
+
+\end_inset
+
+ o arquivo de implementação da classe 
+\family typewriter
+CCilindro
+\family default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de implementação da classe CCilindro.cpp.},
+ label={cilindro-cpp},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CCilindro.cpp}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{testemunho-h}
+\end_layout
+
+\end_inset
+
+ o arquivo com código da classe 
+\family typewriter
+CTestemunhoRocha
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de cabeçalho da classe CTestemunhoRocha.h.},
+ label={testemunho-h},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CTestemunhoRocha.h}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{testemunho-cpp}
+\end_layout
+
+\end_inset
+
+ o arquivo de implementação da classe 
+\family typewriter
+
+\begin_inset Newline newline
+\end_inset
+
+CTestemunhoRocha
+\family default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de implementação da classe CTestemunhoRocha.cpp.
+}, label={testemunho-cpp},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CTestemunhoRocha.cpp}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{permeametro-h}
+\end_layout
+
+\end_inset
+
+ o arquivo com código da classe 
+\family typewriter
+CPermeametro
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de cabeçalho da classe CPermeametro.h.},
+ label={permeametro-h},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CPermeametro.h}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{permeametro-cpp}
+\end_layout
+
+\end_inset
+
+ o arquivo de implementação da classe 
+\family typewriter
+CPermeametro
+\family default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de implementação da classe CPermeametro.cpp.},
+ label={permeametro-cpp},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CPermeametro.cpp}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{gaspermeametro-h}
+\end_layout
+
+\end_inset
+
+ o arquivo com código da classe 
+\family typewriter
+CGasPermeametro
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de cabeçalho da classe CGasPermeametro.h.},
+ label={gaspermeametro-h},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CGasPermeametro.h}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{gaspermeametro-cpp}
+\end_layout
+
+\end_inset
+
+ o arquivo de implementação da classe 
+\family typewriter
+CGasPermeametro
+\family default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de implementação da classe CGasPermeametro.cpp.}
+, label={gaspermeametro-cpp},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CGasPermeametro.cpp}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{caracteriza-h}
+\end_layout
+
+\end_inset
+
+ o arquivo com código da classe 
+\family typewriter
+
+\begin_inset Newline newline
+\end_inset
+
+CCaracterizacaoReservatorio
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de cabeçalho da classe CCaracterizacaoReservat
+orio.h.}, label={caracteriza-h},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CCaracterizacaoReservatorio.h}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{caracteriza-cpp}
+\end_layout
+
+\end_inset
+
+ o arquivo de implementação da classe
+\family typewriter
+ 
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+CCaracterizacaoReservatorio
+\family default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de implementação da classe CCaracterizacaoRese
+rvatorio.cpp.}, label={caracteriza-cpp},extendedchars=true,breaklines=true,basicst
+yle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CCaracterizacaoReservatorio.cpp}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{simuladorteste-h}
+\end_layout
+
+\end_inset
+
+ o arquivo com código da classe 
+\family typewriter
+CSimuladorAnaliseTestePressao
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de cabeçalho da classe CSimuladorAnaliseTesteP
+ressao.h.}, label={simuladorteste-h},extendedchars=true,breaklines=true,basicstyle
+=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CSimuladorAnaliseTestePressao.h}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{simuladorteste-cpp}
+\end_layout
+
+\end_inset
+
+ o arquivo de implementação da classe 
+\family typewriter
+
+\begin_inset Newline newline
+\end_inset
+
+CSimuladorAnaliseTestePressao
+\family default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de implementação da classe CSimuladorAnaliseTe
+stePressao.cpp.}, label={simuladorteste-cpp},extendedchars=true,breaklines=true,ba
+sicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CSimuladorAnaliseTestePressao.cpp}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{simuladorperm-h}
+\end_layout
+
+\end_inset
+
+ o arquivo com código da classe 
+\family typewriter
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+CSimuladorPermeabilidadeGas
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de cabeçalho da classe CSimuladorPermeabilidad
+eGas.h.}, label={simuladorperm-h},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CSimuladorPermeabilidadeGas.h}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{simuladorperm-cpp}
+\end_layout
+
+\end_inset
+
+ o arquivo de implementação da classe 
+\family typewriter
+
+\begin_inset Newline newline
+\end_inset
+
+CSimuladorPermeabilidadeGas
+\family default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={Arquivo de implementação da classe CSimuladorPermeabil
+idadeGas.cpp.}, label={simuladorperm-cpp},extendedchars=true,breaklines=true,basic
+style=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/CSimuladorPermeabilidadeGas.cpp}
+\end_layout
+
+\end_inset
+
+ Apresenta-se na listagem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{main.cpp}
+\end_layout
+
+\end_inset
+
+ o programa que usas a classes listadas acima.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=C++} 
+\backslash
+lstinputlisting[ caption={
+\end_layout
+
+\begin_layout Plain Layout
+
+Arquivo de implementação da função 
+\backslash
+texttt{main()}.}, label={main.cpp},extendedchars=true,breaklines=true,basicstyle=
+\backslash
+footnotesize
+\backslash
+tt] {../listagens/main.cpp}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

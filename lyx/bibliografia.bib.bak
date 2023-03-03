@@ -1,0 +1,115 @@
+% This file was created with JabRef 2.10.
+% Encoding: Cp1252
+
+
+@String { LENEP = {Laboratório de Engenharia e Exploração de Petróleo} }
+@String { LMPT  = {Laboratório de Meios Porosos e Propriedades Termofísicas} }
+@String { UENF  = {Universidade Estadual do Norte Fluminense} }
+@String { UFSC  = {Universidade Federal de Santa Catarina} }
+
+@Unpublished{maximiano,
+  Title                    = {PROGRAMA PARA CALCULO DE PARAMETROS DE RESERVATORIOS POR DADOS DE TESTE DE PRESSAO},
+  Author                   = {Maximiano Kanda Ferraz},
+
+  Month                    = {04},
+  Year                     = {2012},
+
+  Crossref                 = {programamaximiano},
+  Owner                    = {Joao Vitor},
+  Timestamp                = {2015.02.02}
+}
+
+@Unpublished{flavio,
+  Title                    = {PROGRAMA PARA CÁLCULO DA PERMEABILIDADE E POROSIDADE DE ROCHAS A PARTIR DE DADOS EXPERIMENTAIS},
+  Author                   = {Flavio Rodrigues de Souza},
+
+  Month                    = {02},
+  Year                     = {2012},
+
+  Crossref                 = {programaflavioeroger},
+  Owner                    = {Joao Vitor},
+  Timestamp                = {2015.02.02}
+}
+
+@Book{reservatorio-livroverde,
+  Title                    = {Engenharia de Reservatórios de petróleo},
+  Author                   = {Adalberto Rosa, Renato Carvalho, Daniel Xavier},
+  Publisher                = {Interciência},
+  Year                     = {2006},
+
+  Address                  = {Rio de Janeiro}
+}
+
+@Book{adb-prog-livroCpp,
+  Title                    = {Programação Orientada a Objeto com C++ - Aprenda a Programar em Ambiente Multiplataforma com Software Livre},
+  Author                   = {André Duarte Bueno},
+  Publisher                = {Novatec},
+  Year                     = {2003},
+
+  Address                  = {São Paulo}
+}
+
+@Article{petrosky&farshad,
+  Title                    = {Viscosity Correlations for Gulf of Mexico Crude Oils},
+  Author                   = {Petrosky e Farshad},
+  Year                     = {1993},
+
+  Owner                    = {Joao Vitor},
+  Timestamp                = {2015.03.15}
+}
+
+@Book{SL-latex-companion,
+  Title                    = {Latex Companion},
+  Author                   = {Michel Grossens and Frank Mittelbach and Alexander Samarin},
+  Publisher                = {Addison-Wesley},
+  Year                     = {1993},
+
+  Address                  = {New York}
+}
+
+@Book{SL-latex-lyxtut,
+  Title                    = {O Tutorial de Lyx},
+  Author                   = {Amir Karger},
+  Publisher                = {LyX Team - http://www.lyx.org},
+  Year                     = {2004}
+}
+
+@Book{spe-livrovermelho,
+  Title                    = {Well Testing},
+  Author                   = {John Lee},
+  Publisher                = {SPE},
+  Year                     = {1982},
+
+  Address                  = {New York}
+}
+
+@InProceedings{teste-pressao,
+  Title                    = {Teoria dos Testes de Pressão em Poços},
+  Author                   = {Álvaro M. M. Peres},
+  Year                     = {2008},
+
+  Address                  = {Rio de Janeiro},
+  Publisher                = {Anais do VI Encontro ENGEP}
+}
+
+@Book{rawlinsmetodoCN,
+  Author                   = {Rawlins e Schellardt},
+  Year                     = {1936},
+
+  Owner                    = {Joao Vitor},
+  Timestamp                = {2015.02.02}
+}
+
+@Book{SL-latex-demo,
+  Title                    = {Latex demo: Exemplo com Latex 2e},
+  Author                   = {Klauss Steding-Jessen},
+  Year                     = {2000}
+}
+
+@Book{SL-latex-lyxUG,
+  Title                    = {The LyX User's Guide},
+  Editor                   = {LyX-Team},
+  Publisher                = {LyX Team - http://www.lyx.org},
+  Year                     = {2004}
+}
+
